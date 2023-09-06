@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{%block title %}
+about
+{% endblock %}
+{%block content %}
+<h1 class = "text-center">About</h1>
+<hr>
+ {%for a in ab %}
+<div class = "bg-dark text-white text-center p-3 my-3 mx-auto w-50 border border-warning rounded">
+<h1>{{a.about_title}}</h1>
+<p> {{a.about_description}}</P>
+</div>
+{% endfor %}
+
+{%endblock%}

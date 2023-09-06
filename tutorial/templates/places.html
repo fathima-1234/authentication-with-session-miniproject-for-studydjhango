@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{%block title %}
+places
+{% endblock %}
+{%block content %}
+<h1 class = "text-center"> Places In Medoview</h1>
+<hr>
+<div class = "container text-center bg-dark">
+ {%for a in places %}
+
+    <div class="card text-center mx-3 my-5 " style="width: 18rem;display:inline-block">
+        <img src="{{a.places_image.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{a.places_title}}</h5>
+          <p class="card-text">{{a.places_description}}</p>
+         
+        </div>
+      </div>
+
+{% endfor %}
+</div>
+{% endblock %}
